@@ -23,12 +23,16 @@ def encode(password):
 
 # Gabriel Schreiber
 def decode(password):
+    # the decoded password is stored here
     password_decoded = ''
-
+    # this for loop changes the encoded password to the original password that was entered by the user
     for value in password:
+        # this subtracts three from the value
         decoded = str(int(value) - 3)
+        # 10 is added to the decoded values and turned into a string
         if int(decoded) < 0:
             decoded = str(int(decoded) + 10)
+        # the decoded password is stored
         password_decoded += decoded
 
     return password_decoded
